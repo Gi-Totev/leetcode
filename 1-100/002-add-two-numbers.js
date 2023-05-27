@@ -42,7 +42,7 @@ function addTwoNumbers(l1, l2) {
     carryOver = 0;
   }
 
-  return result;
+  return result.next;
 };
 
 const l1 = new ListNode(1, new ListNode(8, null));
