@@ -8,15 +8,17 @@ function twoSum(nums, target) {
   const map = new Map();
   const result = [0, 0];
 
-  for (const i in nums) {
-    const current = map.get(target - nums[i]);
+  let current = undefined;
+
+  for (let i = 0; i < nums.length; i++) {
+    current = map.get(target - nums[i]);
 
     if (current != undefined) {
       result[0] = current;
-      result[1] = Number(i);
+      result[1] = i;
     }
 
-    map.set(nums[i], Number(i));
+    map.set(nums[i], i);
   }
 
   return result;
